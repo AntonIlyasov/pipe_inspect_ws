@@ -160,19 +160,19 @@
   "file": "/home/anton20241/pipe_inspect_ws/src/aruco_ros/aruco_ros/src/aruco_ros_utils.cpp"
 },
 {
-  "directory": "/home/anton20241/pipe_inspect_ws/src/build/send_results_vdrk",
-  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"send_results_vdrk\\\" -I/home/anton20241/pipe_inspect_ws/src/build/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/vdrk_pose_sub.dir/src/vdrk_pose_sub.cpp.o -c /home/anton20241/pipe_inspect_ws/src/send_results_vdrk/src/vdrk_pose_sub.cpp",
-  "file": "/home/anton20241/pipe_inspect_ws/src/send_results_vdrk/src/vdrk_pose_sub.cpp"
+  "directory": "/home/anton20241/pipe_inspect_ws/src/build/get_vrdk_pose",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"get_vrdk_pose\\\" -I/home/anton20241/pipe_inspect_ws/src/build/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/vdrk_pose_sub.dir/src/vdrk_pose_sub.cpp.o -c /home/anton20241/pipe_inspect_ws/src/get_vrdk_pose/src/vdrk_pose_sub.cpp",
+  "file": "/home/anton20241/pipe_inspect_ws/src/get_vrdk_pose/src/vdrk_pose_sub.cpp"
 },
 {
-  "directory": "/home/anton20241/pipe_inspect_ws/src/build/send_results_vdrk",
-  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"send_results_vdrk\\\" -I/home/anton20241/pipe_inspect_ws/src/build/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/cam_frame_broadcaster.dir/src/cam_frame_broadcaster.cpp.o -c /home/anton20241/pipe_inspect_ws/src/send_results_vdrk/src/cam_frame_broadcaster.cpp",
-  "file": "/home/anton20241/pipe_inspect_ws/src/send_results_vdrk/src/cam_frame_broadcaster.cpp"
+  "directory": "/home/anton20241/pipe_inspect_ws/src/build/get_vrdk_pose",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"get_vrdk_pose\\\" -I/home/anton20241/pipe_inspect_ws/src/build/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/cam_frame_broadcaster.dir/src/cam_frame_broadcaster.cpp.o -c /home/anton20241/pipe_inspect_ws/src/get_vrdk_pose/src/cam_frame_broadcaster.cpp",
+  "file": "/home/anton20241/pipe_inspect_ws/src/get_vrdk_pose/src/cam_frame_broadcaster.cpp"
 },
 {
-  "directory": "/home/anton20241/pipe_inspect_ws/src/build/send_results_vdrk",
-  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"send_results_vdrk\\\" -I/home/anton20241/pipe_inspect_ws/src/build/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/vdrk_pose_pub.dir/src/vdrk_pose_pub.cpp.o -c /home/anton20241/pipe_inspect_ws/src/send_results_vdrk/src/vdrk_pose_pub.cpp",
-  "file": "/home/anton20241/pipe_inspect_ws/src/send_results_vdrk/src/vdrk_pose_pub.cpp"
+  "directory": "/home/anton20241/pipe_inspect_ws/src/build/get_vrdk_pose",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"get_vrdk_pose\\\" -I/home/anton20241/pipe_inspect_ws/src/build/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/vdrk_pose_pub.dir/src/vdrk_pose_pub.cpp.o -c /home/anton20241/pipe_inspect_ws/src/get_vrdk_pose/src/vdrk_pose_pub.cpp",
+  "file": "/home/anton20241/pipe_inspect_ws/src/get_vrdk_pose/src/vdrk_pose_pub.cpp"
 },
 {
   "directory": "/home/anton20241/pipe_inspect_ws/src/build/track_make",
@@ -185,18 +185,18 @@
   "file": "/home/anton20241/pipe_inspect_ws/src/track_make/src/camera_frame_broadcaster.cpp"
 },
 {
-  "directory": "/home/anton20241/pipe_inspect_ws/src/build/vdrk_move",
-  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"vdrk_move\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/go_in_radius.dir/src/go_in_radius.cpp.o -c /home/anton20241/pipe_inspect_ws/src/vdrk_move/src/go_in_radius.cpp",
-  "file": "/home/anton20241/pipe_inspect_ws/src/vdrk_move/src/go_in_radius.cpp"
+  "directory": "/home/anton20241/pipe_inspect_ws/src/build/vrdk_move",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"vrdk_move\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/go_in_radius.dir/src/go_in_radius.cpp.o -c /home/anton20241/pipe_inspect_ws/src/vrdk_move/src/go_in_radius.cpp",
+  "file": "/home/anton20241/pipe_inspect_ws/src/vrdk_move/src/go_in_radius.cpp"
 },
 {
-  "directory": "/home/anton20241/pipe_inspect_ws/src/build/vdrk_move",
-  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"vdrk_move\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/est_go_in_radius.dir/src/est_go_in_radius.cpp.o -c /home/anton20241/pipe_inspect_ws/src/vdrk_move/src/est_go_in_radius.cpp",
-  "file": "/home/anton20241/pipe_inspect_ws/src/vdrk_move/src/est_go_in_radius.cpp"
+  "directory": "/home/anton20241/pipe_inspect_ws/src/build/vrdk_move",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"vrdk_move\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/est_go_in_radius.dir/src/est_go_in_radius.cpp.o -c /home/anton20241/pipe_inspect_ws/src/vrdk_move/src/est_go_in_radius.cpp",
+  "file": "/home/anton20241/pipe_inspect_ws/src/vrdk_move/src/est_go_in_radius.cpp"
 },
 {
-  "directory": "/home/anton20241/pipe_inspect_ws/src/build/vdrk_move",
-  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"vdrk_move\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/est_go_in_line.dir/src/est_go_in_line.cpp.o -c /home/anton20241/pipe_inspect_ws/src/vdrk_move/src/est_go_in_line.cpp",
-  "file": "/home/anton20241/pipe_inspect_ws/src/vdrk_move/src/est_go_in_line.cpp"
+  "directory": "/home/anton20241/pipe_inspect_ws/src/build/vrdk_move",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"vrdk_move\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/est_go_in_line.dir/src/est_go_in_line.cpp.o -c /home/anton20241/pipe_inspect_ws/src/vrdk_move/src/est_go_in_line.cpp",
+  "file": "/home/anton20241/pipe_inspect_ws/src/vrdk_move/src/est_go_in_line.cpp"
 }
 ]

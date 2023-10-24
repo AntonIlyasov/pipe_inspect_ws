@@ -141,9 +141,9 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/anton20241/pipe_inspect_ws/src/build/get_frame_from_cam/cmake_install.cmake")
   include("/home/anton20241/pipe_inspect_ws/src/build/marker_detect_module/cmake_install.cmake")
   include("/home/anton20241/pipe_inspect_ws/src/build/aruco_ros/aruco_ros/cmake_install.cmake")
-  include("/home/anton20241/pipe_inspect_ws/src/build/send_results_vdrk/cmake_install.cmake")
+  include("/home/anton20241/pipe_inspect_ws/src/build/get_vrdk_pose/cmake_install.cmake")
   include("/home/anton20241/pipe_inspect_ws/src/build/track_make/cmake_install.cmake")
-  include("/home/anton20241/pipe_inspect_ws/src/build/vdrk_move/cmake_install.cmake")
+  include("/home/anton20241/pipe_inspect_ws/src/build/vrdk_move/cmake_install.cmake")
 
 endif()
 

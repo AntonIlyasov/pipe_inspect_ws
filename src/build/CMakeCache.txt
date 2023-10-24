@@ -496,6 +496,12 @@ get_frame_from_cam_BINARY_DIR:STATIC=/home/anton20241/pipe_inspect_ws/src/build/
 get_frame_from_cam_SOURCE_DIR:STATIC=/home/anton20241/pipe_inspect_ws/src/get_frame_from_cam
 
 //Value Computed by CMake
+get_vrdk_pose_BINARY_DIR:STATIC=/home/anton20241/pipe_inspect_ws/src/build/get_vrdk_pose
+
+//Value Computed by CMake
+get_vrdk_pose_SOURCE_DIR:STATIC=/home/anton20241/pipe_inspect_ws/src/get_vrdk_pose
+
+//Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/anton20241/pipe_inspect_ws/src/build/gtest/googlemock
 
 //Dependencies for the target
@@ -690,6 +696,12 @@ vdrk_move_SOURCE_DIR:STATIC=/home/anton20241/pipe_inspect_ws/src/vdrk_move
 
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/noetic/share/visualization_msgs/cmake
+
+//Value Computed by CMake
+vrdk_move_BINARY_DIR:STATIC=/home/anton20241/pipe_inspect_ws/src/build/vrdk_move
+
+//Value Computed by CMake
+vrdk_move_SOURCE_DIR:STATIC=/home/anton20241/pipe_inspect_ws/src/vrdk_move
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake

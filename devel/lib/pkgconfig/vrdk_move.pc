@@ -1,0 +1,8 @@
+prefix=/home/anton20241/pipe_inspect_ws/devel
+
+Name: vrdk_move
+Description: Description of vrdk_move
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
