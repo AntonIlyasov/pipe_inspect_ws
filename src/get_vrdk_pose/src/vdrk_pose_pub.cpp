@@ -331,6 +331,7 @@ void setCam2ArInversePose(){
                                         estCrntArCamPose.pose.orientation.y,
                                         estCrntArCamPose.pose.orientation.z,
                                         estCrntArCamPose.pose.orientation.w) );
+  tf::Transform transform_inverse = transform.inverse();
   printf("\n------------------------------------------");
   printf("\ngetOrigin().x()   = %.5f", transform.getOrigin().x());
   printf("\ngetOrigin().y()   = %.5f", transform.getOrigin().y());
@@ -356,11 +357,12 @@ int main(int argc, char **argv){
   ros::NodeHandle node;
   tf::TransformListener listener;
   setup(node);
-  ros::Rate loop_rate(30);
+  ros::Rate loop_rate(100);
   while (ros::ok()){
     ros::spinOnce();
     allPosesGet = getEstCrntArCamPose && getOdomPoses;
     if (!allPosesGet) continue;
+    allPosesGet         = false;
     getEstCrntArCamPose = false;
     getOdomPoses        = false;
     // setCam2ArInversePose();
