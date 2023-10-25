@@ -59,10 +59,10 @@ aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_generate_messages_cpp: devel/include/
 
 devel/include/aruco_msgs/Marker.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 devel/include/aruco_msgs/Marker.h: ../aruco_ros/aruco_msgs/msg/Marker.msg
-devel/include/aruco_msgs/Marker.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseWithCovariance.msg
 devel/include/aruco_msgs/Marker.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-devel/include/aruco_msgs/Marker.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+devel/include/aruco_msgs/Marker.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseWithCovariance.msg
 devel/include/aruco_msgs/Marker.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+devel/include/aruco_msgs/Marker.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 devel/include/aruco_msgs/Marker.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 devel/include/aruco_msgs/Marker.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anton20241/pipe_inspect_ws/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from aruco_msgs/Marker.msg"
@@ -70,11 +70,11 @@ devel/include/aruco_msgs/Marker.h: /opt/ros/noetic/share/gencpp/msg.h.template
 
 devel/include/aruco_msgs/MarkerArray.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 devel/include/aruco_msgs/MarkerArray.h: ../aruco_ros/aruco_msgs/msg/MarkerArray.msg
-devel/include/aruco_msgs/MarkerArray.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseWithCovariance.msg
 devel/include/aruco_msgs/MarkerArray.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-devel/include/aruco_msgs/MarkerArray.h: ../aruco_ros/aruco_msgs/msg/Marker.msg
-devel/include/aruco_msgs/MarkerArray.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+devel/include/aruco_msgs/MarkerArray.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseWithCovariance.msg
 devel/include/aruco_msgs/MarkerArray.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+devel/include/aruco_msgs/MarkerArray.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+devel/include/aruco_msgs/MarkerArray.h: ../aruco_ros/aruco_msgs/msg/Marker.msg
 devel/include/aruco_msgs/MarkerArray.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 devel/include/aruco_msgs/MarkerArray.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anton20241/pipe_inspect_ws/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from aruco_msgs/MarkerArray.msg"
