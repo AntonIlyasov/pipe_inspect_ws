@@ -118,7 +118,9 @@ void sendEstCamLinkBase2EstCamLinkOptTransform(){
   tf::TransformBroadcaster br;
   tf::Transform transform;
   transform.setOrigin( tf::Vector3(0, 0, 0) );
-  transform.setRotation( tf::Quaternion(-0.7071067811865476, 0, 0, 0.7071067811865476) );
+  tf::Quaternion quaternion;
+  quaternion.setRPY(0, 0, 90);
+  transform.setRotation(quaternion);
   br.sendTransform( tf::StampedTransform(transform, ros::Time::now(), "est_camera_link_base_direct", "est_camera_link_optical_direct") );
   ROS_INFO("est_camera_link_base_direct -> est_camera_link_optical_direct");
 }
@@ -309,15 +311,15 @@ void setup(ros::NodeHandle& node){
 }
 
 // задаем Н.У. для ВДРК
-void setInitVdrkPose(){
+void setInitVdrkPose(const tf::TransformListener& listener){
   if (!initVdrkPoseIsSet){
     initVdrkPoseIsSet     = true;
-    estCrntArOdomPose     = crntArOdomPose;
     estCrntCamOdomPose    = crntCamOdomPose;
     estPrevArCamPose      = estCrntArCamPose;
     sendOdom2EstCamLinkBaseTransform();
     sendEstCamLinkBase2EstCamLinkOptTransform();
     sendEstCamLinkOpt2EstArLinkBaseTransform();
+    getEstCrntArOdomPose(listener);
   }
 }
 
@@ -366,7 +368,7 @@ int main(int argc, char **argv){
     getEstCrntArCamPose = false;
     getOdomPoses        = false;
     // setCam2ArInversePose();
-    setInitVdrkPose();
+    setInitVdrkPose(listener);
     getCrntArCamPose(listener);
     getEstCrntArOdomPose(listener);
     getEstCrntCamOdomPose(listener);
