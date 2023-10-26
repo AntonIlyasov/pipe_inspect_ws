@@ -2,7 +2,7 @@
 <launch>
     <arg name="velocity"                   default="0.056"/>
     
-    <node pkg="vdrk_move" type="est_go_in_line"   name="est_go_in_line" output="screen">
+    <node pkg="vrdk_move" type="est_go_in_line"   name="est_go_in_line" output="screen">
     	<param name="Velocity"                     value="$(arg velocity)"/>
     </node>
 
