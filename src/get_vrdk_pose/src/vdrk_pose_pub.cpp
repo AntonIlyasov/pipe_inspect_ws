@@ -87,17 +87,41 @@ void getCrntOdomPoseHandler(const gazebo_msgs::ModelStates& arucoGazeboMsg) {
   getOdomPoses = true;
 }
 
+void sendCamLinkBase2CamLinkOptTransform(){
+  tf::TransformBroadcaster br;
+  tf::Transform transform;
+  transform.setOrigin( tf::Vector3(0, 0, 0) );
+  tf::Quaternion quaternion;
+  quaternion.setRPY(0, 0, 90);
+  transform.setRotation(quaternion);
+  br.sendTransform( tf::StampedTransform(transform, ros::Time::now(), "camera_link_base", "camera_link_optical") );
+  ROS_INFO("camera_link_base -> camera_link_optical");
+}
+
+void setPoseFromTransform(geometry_msgs::PoseStamped &pose, tf::StampedTransform &transform){
+  pose.pose.position.x    = transform.getOrigin().x();
+  pose.pose.position.y    = transform.getOrigin().y();
+  pose.pose.position.z    = transform.getOrigin().z();
+  pose.pose.orientation.x = transform.getRotation().x();
+  pose.pose.orientation.y = transform.getRotation().y();
+  pose.pose.orientation.z = transform.getRotation().z();
+  pose.pose.orientation.w = transform.getRotation().w();
+}
+
 // получаем текущее фактическое положение _маркера_ относительно _камеры_
 void getCrntArCamPose(const tf::TransformListener& listener){
+
+  sendCamLinkBase2CamLinkOptTransform();
+
+  tf::StampedTransform transform;
   try{
-    crntArOdomPose.header.frame_id  = "odom";
-    crntArOdomPose.header.stamp     = ros::Time();
-    listener.transformPose("camera_link_optical", crntArOdomPose, crntArCamPose);
+    listener.lookupTransform("camera_link_optical", "aruco_link_base", ros::Time(0), transform);
   }
   catch (tf::TransformException &ex) {
     ROS_ERROR("%s",ex.what());
     ros::Duration(1.0).sleep();
   }
+  setPoseFromTransform(crntArCamPose, transform);
 }
 
 void sendOdom2EstCamLinkBaseTransform(){
@@ -180,16 +204,6 @@ void sendEstCamLinkOpt2EstCamLinkBaseTransform(){
   transform_inverse = transform.inverse();
   br.sendTransform( tf::StampedTransform(transform_inverse, ros::Time::now(), "est_camera_link_optical_inverse", "est_camera_link_base_inverse") );
   ROS_INFO("est_camera_link_optical_inverse -> est_camera_link_base_inverse");
-}
-
-void setPoseFromTransform(geometry_msgs::PoseStamped &pose, tf::StampedTransform &transform){
-  pose.pose.position.x    = transform.getOrigin().x();
-  pose.pose.position.y    = transform.getOrigin().y();
-  pose.pose.position.z    = transform.getOrigin().z();
-  pose.pose.orientation.x = transform.getRotation().x();
-  pose.pose.orientation.y = transform.getRotation().y();
-  pose.pose.orientation.z = transform.getRotation().z();
-  pose.pose.orientation.w = transform.getRotation().w();
 }
 
 // едет маркер
@@ -322,36 +336,6 @@ void setInitVdrkPose(const tf::TransformListener& listener){
   }
 }
 
-// user test function
-void setCam2ArInversePose(){
-  tf::Transform transform;
-  transform.setOrigin( tf::Vector3( estCrntArCamPose.pose.position.x, 
-                                    estCrntArCamPose.pose.position.y, 
-                                    estCrntArCamPose.pose.position.z) );
-  transform.setRotation( tf::Quaternion(estCrntArCamPose.pose.orientation.x, 
-                                        estCrntArCamPose.pose.orientation.y,
-                                        estCrntArCamPose.pose.orientation.z,
-                                        estCrntArCamPose.pose.orientation.w) );
-  tf::Transform transform_inverse = transform.inverse();
-  printf("\n------------------------------------------");
-  printf("\ngetOrigin().x()   = %.5f", transform.getOrigin().x());
-  printf("\ngetOrigin().y()   = %.5f", transform.getOrigin().y());
-  printf("\ngetOrigin().z()   = %.5f", transform.getOrigin().z());
-  printf("\ngetRotation().x() = %.5f", transform.getRotation().x());
-  printf("\ngetRotation().y() = %.5f", transform.getRotation().y());
-  printf("\ngetRotation().z() = %.5f", transform.getRotation().z());
-  printf("\ngetRotation().w() = %.5f", transform.getRotation().w());
-  printf("\n------------------------------------------");
-  printf("\ninverse().getOrigin().x()   = %.5f", transform.inverse().getOrigin().x());
-  printf("\ninverse().getOrigin().y()   = %.5f", transform.inverse().getOrigin().y());
-  printf("\ninverse().getOrigin().z()   = %.5f", transform.inverse().getOrigin().z());
-  printf("\ninverse().getRotation().x() = %.5f", transform.inverse().getRotation().x());
-  printf("\ninverse().getRotation().y() = %.5f", transform.inverse().getRotation().y());
-  printf("\ninverse().getRotation().z() = %.5f", transform.inverse().getRotation().z());
-  printf("\ninverse().getRotation().w() = %.5f", transform.inverse().getRotation().w());
-  printf("\n------------------------------------------");
-}
-
 int main(int argc, char **argv){
   ros::init(argc, argv, "vdrk_pose_pub");
   ROS_INFO_STREAM("vdrk_pose_pub is ready");
@@ -366,7 +350,6 @@ int main(int argc, char **argv){
     allPosesGet         = false;
     getEstCrntArCamPose = false;
     getOdomPoses        = false;
-    // setCam2ArInversePose();
     setInitVdrkPose(listener);
     getCrntArCamPose(listener);
     getEstCrntArOdomPose(listener);
