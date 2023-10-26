@@ -33,7 +33,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/anton20241/pipe_inspect_ws/src/aruco_ros/aruco/include/aruco"
-  "/usr/local/include/opencv4"
+  "/usr/include/opencv4"
   "/usr/include/eigen3"
   )
 

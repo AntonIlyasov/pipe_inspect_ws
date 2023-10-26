@@ -35,14 +35,6 @@
 /home/anton20241/pipe_inspect_ws/build/gtest/googletest/CMakeFiles/test.dir
 /home/anton20241/pipe_inspect_ws/build/gtest/googletest/CMakeFiles/gtest_main.dir
 /home/anton20241/pipe_inspect_ws/build/gtest/googletest/CMakeFiles/gtest.dir
-/home/anton20241/pipe_inspect_ws/build/camera/CMakeFiles/install/strip.dir
-/home/anton20241/pipe_inspect_ws/build/camera/CMakeFiles/install/local.dir
-/home/anton20241/pipe_inspect_ws/build/camera/CMakeFiles/install.dir
-/home/anton20241/pipe_inspect_ws/build/camera/CMakeFiles/list_install_components.dir
-/home/anton20241/pipe_inspect_ws/build/camera/CMakeFiles/rebuild_cache.dir
-/home/anton20241/pipe_inspect_ws/build/camera/CMakeFiles/edit_cache.dir
-/home/anton20241/pipe_inspect_ws/build/camera/CMakeFiles/test.dir
-/home/anton20241/pipe_inspect_ws/build/camera/CMakeFiles/_catkin_empty_exported_target.dir
 /home/anton20241/pipe_inspect_ws/build/duck/CMakeFiles/install/strip.dir
 /home/anton20241/pipe_inspect_ws/build/duck/CMakeFiles/install/local.dir
 /home/anton20241/pipe_inspect_ws/build/duck/CMakeFiles/install.dir
@@ -50,6 +42,7 @@
 /home/anton20241/pipe_inspect_ws/build/duck/CMakeFiles/rebuild_cache.dir
 /home/anton20241/pipe_inspect_ws/build/duck/CMakeFiles/edit_cache.dir
 /home/anton20241/pipe_inspect_ws/build/duck/CMakeFiles/test.dir
+/home/anton20241/pipe_inspect_ws/build/duck/CMakeFiles/_catkin_empty_exported_target.dir
 /home/anton20241/pipe_inspect_ws/build/aruco_ros/aruco_msgs/CMakeFiles/install/strip.dir
 /home/anton20241/pipe_inspect_ws/build/aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_genlisp.dir
 /home/anton20241/pipe_inspect_ws/build/aruco_ros/aruco_msgs/CMakeFiles/_aruco_msgs_generate_messages_check_deps_Marker.dir

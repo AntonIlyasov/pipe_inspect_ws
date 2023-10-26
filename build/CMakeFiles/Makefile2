@@ -54,7 +54,6 @@ CMAKE_BINARY_DIR = /home/anton20241/pipe_inspect_ws/build
 
 # The main recursive "all" target.
 all: gtest/all
-all: camera/all
 all: duck/all
 all: aruco_ros/aruco_msgs/all
 all: track_deter_gazebo/all
@@ -72,7 +71,6 @@ all: vrdk_move/all
 
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
-preinstall: camera/preinstall
 preinstall: duck/preinstall
 preinstall: aruco_ros/aruco_msgs/preinstall
 preinstall: track_deter_gazebo/preinstall
@@ -95,7 +93,6 @@ clean: CMakeFiles/clean_test_results.dir/clean
 clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
-clean: camera/clean
 clean: duck/clean
 clean: aruco_ros/aruco_msgs/clean
 clean: track_deter_gazebo/clean
@@ -227,24 +224,6 @@ aruco_ros/aruco_ros/clean: aruco_ros/aruco_ros/CMakeFiles/visualization_msgs_gen
 .PHONY : aruco_ros/aruco_ros/clean
 
 #=============================================================================
-# Directory level rules for directory camera
-
-# Recursive "all" directory target.
-camera/all:
-
-.PHONY : camera/all
-
-# Recursive "preinstall" directory target.
-camera/preinstall:
-
-.PHONY : camera/preinstall
-
-# Recursive "clean" directory target.
-camera/clean: camera/CMakeFiles/_catkin_empty_exported_target.dir/clean
-
-.PHONY : camera/clean
-
-#=============================================================================
 # Directory level rules for directory duck
 
 # Recursive "all" directory target.
@@ -258,7 +237,7 @@ duck/preinstall:
 .PHONY : duck/preinstall
 
 # Recursive "clean" directory target.
-duck/clean:
+duck/clean: duck/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 .PHONY : duck/clean
 
@@ -773,31 +752,31 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
-# Target rules for target camera/CMakeFiles/_catkin_empty_exported_target.dir
+# Target rules for target duck/CMakeFiles/_catkin_empty_exported_target.dir
 
 # All Build rule for target.
-camera/CMakeFiles/_catkin_empty_exported_target.dir/all:
-	$(MAKE) -f camera/CMakeFiles/_catkin_empty_exported_target.dir/build.make camera/CMakeFiles/_catkin_empty_exported_target.dir/depend
-	$(MAKE) -f camera/CMakeFiles/_catkin_empty_exported_target.dir/build.make camera/CMakeFiles/_catkin_empty_exported_target.dir/build
+duck/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) -f duck/CMakeFiles/_catkin_empty_exported_target.dir/build.make duck/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) -f duck/CMakeFiles/_catkin_empty_exported_target.dir/build.make duck/CMakeFiles/_catkin_empty_exported_target.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
-.PHONY : camera/CMakeFiles/_catkin_empty_exported_target.dir/all
+.PHONY : duck/CMakeFiles/_catkin_empty_exported_target.dir/all
 
 # Build rule for subdir invocation for target.
-camera/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+duck/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 duck/CMakeFiles/_catkin_empty_exported_target.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-.PHONY : camera/CMakeFiles/_catkin_empty_exported_target.dir/rule
+.PHONY : duck/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: camera/CMakeFiles/_catkin_empty_exported_target.dir/rule
+_catkin_empty_exported_target: duck/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 .PHONY : _catkin_empty_exported_target
 
 # clean rule for target.
-camera/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	$(MAKE) -f camera/CMakeFiles/_catkin_empty_exported_target.dir/build.make camera/CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : camera/CMakeFiles/_catkin_empty_exported_target.dir/clean
+duck/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) -f duck/CMakeFiles/_catkin_empty_exported_target.dir/build.make duck/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : duck/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 #=============================================================================
 # Target rules for target aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_genlisp.dir
