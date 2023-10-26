@@ -1,10 +1,10 @@
 #include <ros/ros.h>
 #include <rosbag/bag.h>
-#include "send_results_vdrk/VdrkPose.h"
+#include "get_vrdk_pose/VdrkPose.h"
 
 rosbag::Bag vdrkPose;
 
-void vdrkPoseHandler(const send_results_vdrk::VdrkPose& vdrkPoseMsg){
+void vdrkPoseHandler(const get_vrdk_pose::VdrkPose& vdrkPoseMsg){
   vdrkPose.write("vdrkPoseTopic", ros::Time::now(), vdrkPoseMsg);
   printf("vdrkPoseHandler writed the next data to vdrkPose.bag:\n");
   printf("######################################################\n");
