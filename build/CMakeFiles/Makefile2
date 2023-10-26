@@ -65,7 +65,7 @@ all: marker_detect_module/all
 all: aruco_ros/aruco_ros/all
 all: get_vrdk_pose/all
 all: track_make/all
-all: vrdk_move/all
+all: vdrk_move/all
 
 .PHONY : all
 
@@ -82,7 +82,7 @@ preinstall: marker_detect_module/preinstall
 preinstall: aruco_ros/aruco_ros/preinstall
 preinstall: get_vrdk_pose/preinstall
 preinstall: track_make/preinstall
-preinstall: vrdk_move/preinstall
+preinstall: vdrk_move/preinstall
 
 .PHONY : preinstall
 
@@ -104,7 +104,7 @@ clean: marker_detect_module/clean
 clean: aruco_ros/aruco_ros/clean
 clean: get_vrdk_pose/clean
 clean: track_make/clean
-clean: vrdk_move/clean
+clean: vdrk_move/clean
 
 .PHONY : clean
 
@@ -486,26 +486,26 @@ tube/clean:
 .PHONY : tube/clean
 
 #=============================================================================
-# Directory level rules for directory vrdk_move
+# Directory level rules for directory vdrk_move
 
 # Recursive "all" directory target.
-vrdk_move/all: vrdk_move/CMakeFiles/go_in_radius.dir/all
-vrdk_move/all: vrdk_move/CMakeFiles/est_go_in_radius.dir/all
-vrdk_move/all: vrdk_move/CMakeFiles/est_go_in_line.dir/all
+vdrk_move/all: vdrk_move/CMakeFiles/go_in_radius.dir/all
+vdrk_move/all: vdrk_move/CMakeFiles/est_go_in_radius.dir/all
+vdrk_move/all: vdrk_move/CMakeFiles/est_go_in_line.dir/all
 
-.PHONY : vrdk_move/all
+.PHONY : vdrk_move/all
 
 # Recursive "preinstall" directory target.
-vrdk_move/preinstall:
+vdrk_move/preinstall:
 
-.PHONY : vrdk_move/preinstall
+.PHONY : vdrk_move/preinstall
 
 # Recursive "clean" directory target.
-vrdk_move/clean: vrdk_move/CMakeFiles/go_in_radius.dir/clean
-vrdk_move/clean: vrdk_move/CMakeFiles/est_go_in_radius.dir/clean
-vrdk_move/clean: vrdk_move/CMakeFiles/est_go_in_line.dir/clean
+vdrk_move/clean: vdrk_move/CMakeFiles/go_in_radius.dir/clean
+vdrk_move/clean: vdrk_move/CMakeFiles/est_go_in_radius.dir/clean
+vdrk_move/clean: vdrk_move/CMakeFiles/est_go_in_line.dir/clean
 
-.PHONY : vrdk_move/clean
+.PHONY : vdrk_move/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
@@ -4142,85 +4142,85 @@ track_make/CMakeFiles/track_make_gennodejs.dir/clean:
 .PHONY : track_make/CMakeFiles/track_make_gennodejs.dir/clean
 
 #=============================================================================
-# Target rules for target vrdk_move/CMakeFiles/go_in_radius.dir
+# Target rules for target vdrk_move/CMakeFiles/go_in_radius.dir
 
 # All Build rule for target.
-vrdk_move/CMakeFiles/go_in_radius.dir/all:
-	$(MAKE) -f vrdk_move/CMakeFiles/go_in_radius.dir/build.make vrdk_move/CMakeFiles/go_in_radius.dir/depend
-	$(MAKE) -f vrdk_move/CMakeFiles/go_in_radius.dir/build.make vrdk_move/CMakeFiles/go_in_radius.dir/build
+vdrk_move/CMakeFiles/go_in_radius.dir/all:
+	$(MAKE) -f vdrk_move/CMakeFiles/go_in_radius.dir/build.make vdrk_move/CMakeFiles/go_in_radius.dir/depend
+	$(MAKE) -f vdrk_move/CMakeFiles/go_in_radius.dir/build.make vdrk_move/CMakeFiles/go_in_radius.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num=58,59 "Built target go_in_radius"
-.PHONY : vrdk_move/CMakeFiles/go_in_radius.dir/all
+.PHONY : vdrk_move/CMakeFiles/go_in_radius.dir/all
 
 # Build rule for subdir invocation for target.
-vrdk_move/CMakeFiles/go_in_radius.dir/rule: cmake_check_build_system
+vdrk_move/CMakeFiles/go_in_radius.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 vrdk_move/CMakeFiles/go_in_radius.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 vdrk_move/CMakeFiles/go_in_radius.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-.PHONY : vrdk_move/CMakeFiles/go_in_radius.dir/rule
+.PHONY : vdrk_move/CMakeFiles/go_in_radius.dir/rule
 
 # Convenience name for target.
-go_in_radius: vrdk_move/CMakeFiles/go_in_radius.dir/rule
+go_in_radius: vdrk_move/CMakeFiles/go_in_radius.dir/rule
 
 .PHONY : go_in_radius
 
 # clean rule for target.
-vrdk_move/CMakeFiles/go_in_radius.dir/clean:
-	$(MAKE) -f vrdk_move/CMakeFiles/go_in_radius.dir/build.make vrdk_move/CMakeFiles/go_in_radius.dir/clean
-.PHONY : vrdk_move/CMakeFiles/go_in_radius.dir/clean
+vdrk_move/CMakeFiles/go_in_radius.dir/clean:
+	$(MAKE) -f vdrk_move/CMakeFiles/go_in_radius.dir/build.make vdrk_move/CMakeFiles/go_in_radius.dir/clean
+.PHONY : vdrk_move/CMakeFiles/go_in_radius.dir/clean
 
 #=============================================================================
-# Target rules for target vrdk_move/CMakeFiles/est_go_in_radius.dir
+# Target rules for target vdrk_move/CMakeFiles/est_go_in_radius.dir
 
 # All Build rule for target.
-vrdk_move/CMakeFiles/est_go_in_radius.dir/all:
-	$(MAKE) -f vrdk_move/CMakeFiles/est_go_in_radius.dir/build.make vrdk_move/CMakeFiles/est_go_in_radius.dir/depend
-	$(MAKE) -f vrdk_move/CMakeFiles/est_go_in_radius.dir/build.make vrdk_move/CMakeFiles/est_go_in_radius.dir/build
+vdrk_move/CMakeFiles/est_go_in_radius.dir/all:
+	$(MAKE) -f vdrk_move/CMakeFiles/est_go_in_radius.dir/build.make vdrk_move/CMakeFiles/est_go_in_radius.dir/depend
+	$(MAKE) -f vdrk_move/CMakeFiles/est_go_in_radius.dir/build.make vdrk_move/CMakeFiles/est_go_in_radius.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num=43,44 "Built target est_go_in_radius"
-.PHONY : vrdk_move/CMakeFiles/est_go_in_radius.dir/all
+.PHONY : vdrk_move/CMakeFiles/est_go_in_radius.dir/all
 
 # Build rule for subdir invocation for target.
-vrdk_move/CMakeFiles/est_go_in_radius.dir/rule: cmake_check_build_system
+vdrk_move/CMakeFiles/est_go_in_radius.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 vrdk_move/CMakeFiles/est_go_in_radius.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 vdrk_move/CMakeFiles/est_go_in_radius.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-.PHONY : vrdk_move/CMakeFiles/est_go_in_radius.dir/rule
+.PHONY : vdrk_move/CMakeFiles/est_go_in_radius.dir/rule
 
 # Convenience name for target.
-est_go_in_radius: vrdk_move/CMakeFiles/est_go_in_radius.dir/rule
+est_go_in_radius: vdrk_move/CMakeFiles/est_go_in_radius.dir/rule
 
 .PHONY : est_go_in_radius
 
 # clean rule for target.
-vrdk_move/CMakeFiles/est_go_in_radius.dir/clean:
-	$(MAKE) -f vrdk_move/CMakeFiles/est_go_in_radius.dir/build.make vrdk_move/CMakeFiles/est_go_in_radius.dir/clean
-.PHONY : vrdk_move/CMakeFiles/est_go_in_radius.dir/clean
+vdrk_move/CMakeFiles/est_go_in_radius.dir/clean:
+	$(MAKE) -f vdrk_move/CMakeFiles/est_go_in_radius.dir/build.make vdrk_move/CMakeFiles/est_go_in_radius.dir/clean
+.PHONY : vdrk_move/CMakeFiles/est_go_in_radius.dir/clean
 
 #=============================================================================
-# Target rules for target vrdk_move/CMakeFiles/est_go_in_line.dir
+# Target rules for target vdrk_move/CMakeFiles/est_go_in_line.dir
 
 # All Build rule for target.
-vrdk_move/CMakeFiles/est_go_in_line.dir/all:
-	$(MAKE) -f vrdk_move/CMakeFiles/est_go_in_line.dir/build.make vrdk_move/CMakeFiles/est_go_in_line.dir/depend
-	$(MAKE) -f vrdk_move/CMakeFiles/est_go_in_line.dir/build.make vrdk_move/CMakeFiles/est_go_in_line.dir/build
+vdrk_move/CMakeFiles/est_go_in_line.dir/all:
+	$(MAKE) -f vdrk_move/CMakeFiles/est_go_in_line.dir/build.make vdrk_move/CMakeFiles/est_go_in_line.dir/depend
+	$(MAKE) -f vdrk_move/CMakeFiles/est_go_in_line.dir/build.make vdrk_move/CMakeFiles/est_go_in_line.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num=41,42 "Built target est_go_in_line"
-.PHONY : vrdk_move/CMakeFiles/est_go_in_line.dir/all
+.PHONY : vdrk_move/CMakeFiles/est_go_in_line.dir/all
 
 # Build rule for subdir invocation for target.
-vrdk_move/CMakeFiles/est_go_in_line.dir/rule: cmake_check_build_system
+vdrk_move/CMakeFiles/est_go_in_line.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 vrdk_move/CMakeFiles/est_go_in_line.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 vdrk_move/CMakeFiles/est_go_in_line.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-.PHONY : vrdk_move/CMakeFiles/est_go_in_line.dir/rule
+.PHONY : vdrk_move/CMakeFiles/est_go_in_line.dir/rule
 
 # Convenience name for target.
-est_go_in_line: vrdk_move/CMakeFiles/est_go_in_line.dir/rule
+est_go_in_line: vdrk_move/CMakeFiles/est_go_in_line.dir/rule
 
 .PHONY : est_go_in_line
 
 # clean rule for target.
-vrdk_move/CMakeFiles/est_go_in_line.dir/clean:
-	$(MAKE) -f vrdk_move/CMakeFiles/est_go_in_line.dir/build.make vrdk_move/CMakeFiles/est_go_in_line.dir/clean
-.PHONY : vrdk_move/CMakeFiles/est_go_in_line.dir/clean
+vdrk_move/CMakeFiles/est_go_in_line.dir/clean:
+	$(MAKE) -f vdrk_move/CMakeFiles/est_go_in_line.dir/build.make vdrk_move/CMakeFiles/est_go_in_line.dir/clean
+.PHONY : vdrk_move/CMakeFiles/est_go_in_line.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

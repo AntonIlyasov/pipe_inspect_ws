@@ -142,7 +142,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/anton20241/pipe_inspect_ws/build/aruco_ros/aruco_ros/cmake_install.cmake")
   include("/home/anton20241/pipe_inspect_ws/build/get_vrdk_pose/cmake_install.cmake")
   include("/home/anton20241/pipe_inspect_ws/build/track_make/cmake_install.cmake")
-  include("/home/anton20241/pipe_inspect_ws/build/vrdk_move/cmake_install.cmake")
+  include("/home/anton20241/pipe_inspect_ws/build/vdrk_move/cmake_install.cmake")
 
 endif()
 

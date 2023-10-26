@@ -91,37 +91,23 @@ void sendCamLinkBase2CamLinkOptTransform(){
   tf::TransformBroadcaster br;
   tf::Transform transform;
   transform.setOrigin( tf::Vector3(0, 0, 0) );
-  tf::Quaternion quaternion;
-  quaternion.setRPY(0, 0, 90);
-  transform.setRotation(quaternion);
+  transform.setRotation( tf::Quaternion(-0.7071067811865476, 0, 0, 0.7071067811865476) );
   br.sendTransform( tf::StampedTransform(transform, ros::Time::now(), "camera_link_base", "camera_link_optical") );
   ROS_INFO("camera_link_base -> camera_link_optical");
 }
 
-void setPoseFromTransform(geometry_msgs::PoseStamped &pose, tf::StampedTransform &transform){
-  pose.pose.position.x    = transform.getOrigin().x();
-  pose.pose.position.y    = transform.getOrigin().y();
-  pose.pose.position.z    = transform.getOrigin().z();
-  pose.pose.orientation.x = transform.getRotation().x();
-  pose.pose.orientation.y = transform.getRotation().y();
-  pose.pose.orientation.z = transform.getRotation().z();
-  pose.pose.orientation.w = transform.getRotation().w();
-}
-
 // получаем текущее фактическое положение _маркера_ относительно _камеры_
 void getCrntArCamPose(const tf::TransformListener& listener){
-
   sendCamLinkBase2CamLinkOptTransform();
-
-  tf::StampedTransform transform;
   try{
-    listener.lookupTransform("camera_link_optical", "aruco_link_base", ros::Time(0), transform);
+    crntArOdomPose.header.frame_id  = "odom";
+    crntArOdomPose.header.stamp     = ros::Time();
+    listener.transformPose("camera_link_optical", crntArOdomPose, crntArCamPose);
   }
   catch (tf::TransformException &ex) {
     ROS_ERROR("%s",ex.what());
     ros::Duration(1.0).sleep();
   }
-  setPoseFromTransform(crntArCamPose, transform);
 }
 
 void sendOdom2EstCamLinkBaseTransform(){
@@ -142,9 +128,7 @@ void sendEstCamLinkBase2EstCamLinkOptTransform(){
   tf::TransformBroadcaster br;
   tf::Transform transform;
   transform.setOrigin( tf::Vector3(0, 0, 0) );
-  tf::Quaternion quaternion;
-  quaternion.setRPY(0, 0, 90);
-  transform.setRotation(quaternion);
+  transform.setRotation( tf::Quaternion(-0.7071067811865476, 0, 0, 0.7071067811865476) );
   br.sendTransform( tf::StampedTransform(transform, ros::Time::now(), "est_camera_link_base_direct", "est_camera_link_optical_direct") );
   ROS_INFO("est_camera_link_base_direct -> est_camera_link_optical_direct");
 }
@@ -198,12 +182,20 @@ void sendEstCamLinkOpt2EstCamLinkBaseTransform(){
   tf::Transform transform;
   tf::Transform transform_inverse;
   transform.setOrigin( tf::Vector3(0, 0, 0) );
-  tf::Quaternion quaternion;
-  quaternion.setRPY(0, 0, 90);
-  transform.setRotation(quaternion);
+  transform.setRotation( tf::Quaternion(-0.7071067811865476, 0, 0, 0.7071067811865476) );
   transform_inverse = transform.inverse();
   br.sendTransform( tf::StampedTransform(transform_inverse, ros::Time::now(), "est_camera_link_optical_inverse", "est_camera_link_base_inverse") );
   ROS_INFO("est_camera_link_optical_inverse -> est_camera_link_base_inverse");
+}
+
+void setPoseFromTransform(geometry_msgs::PoseStamped &pose, tf::StampedTransform &transform){
+  pose.pose.position.x    = transform.getOrigin().x();
+  pose.pose.position.y    = transform.getOrigin().y();
+  pose.pose.position.z    = transform.getOrigin().z();
+  pose.pose.orientation.x = transform.getRotation().x();
+  pose.pose.orientation.y = transform.getRotation().y();
+  pose.pose.orientation.z = transform.getRotation().z();
+  pose.pose.orientation.w = transform.getRotation().w();
 }
 
 // едет маркер
@@ -342,7 +334,7 @@ int main(int argc, char **argv){
   ros::NodeHandle node;
   tf::TransformListener listener;
   setup(node);
-  ros::Rate loop_rate(100);
+  ros::Rate loop_rate(30);
   while (ros::ok()){
     ros::spinOnce();
     allPosesGet = getEstCrntArCamPose && getOdomPoses;

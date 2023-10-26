@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: get_vrdk_pose
-Description: Description of get_vrdk_pose
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: 

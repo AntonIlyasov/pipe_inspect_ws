@@ -1880,7 +1880,7 @@ go_in_radius: cmake_check_build_system
 
 # fast build rule for target.
 go_in_radius/fast:
-	$(MAKE) -f vrdk_move/CMakeFiles/go_in_radius.dir/build.make vrdk_move/CMakeFiles/go_in_radius.dir/build
+	$(MAKE) -f vdrk_move/CMakeFiles/go_in_radius.dir/build.make vdrk_move/CMakeFiles/go_in_radius.dir/build
 .PHONY : go_in_radius/fast
 
 #=============================================================================
@@ -1893,7 +1893,7 @@ est_go_in_radius: cmake_check_build_system
 
 # fast build rule for target.
 est_go_in_radius/fast:
-	$(MAKE) -f vrdk_move/CMakeFiles/est_go_in_radius.dir/build.make vrdk_move/CMakeFiles/est_go_in_radius.dir/build
+	$(MAKE) -f vdrk_move/CMakeFiles/est_go_in_radius.dir/build.make vdrk_move/CMakeFiles/est_go_in_radius.dir/build
 .PHONY : est_go_in_radius/fast
 
 #=============================================================================
@@ -1906,7 +1906,7 @@ est_go_in_line: cmake_check_build_system
 
 # fast build rule for target.
 est_go_in_line/fast:
-	$(MAKE) -f vrdk_move/CMakeFiles/est_go_in_line.dir/build.make vrdk_move/CMakeFiles/est_go_in_line.dir/build
+	$(MAKE) -f vdrk_move/CMakeFiles/est_go_in_line.dir/build.make vdrk_move/CMakeFiles/est_go_in_line.dir/build
 .PHONY : est_go_in_line/fast
 
 # Help Target

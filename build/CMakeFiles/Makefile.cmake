@@ -40,8 +40,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "track_make/catkin_generated/track_make-msg-extras.cmake.installspace.in"
   "track_make/cmake/track_make-genmsg.cmake"
   "tube/catkin_generated/package.cmake"
-  "vrdk_move/catkin_generated/ordered_paths.cmake"
-  "vrdk_move/catkin_generated/package.cmake"
+  "vdrk_move/catkin_generated/ordered_paths.cmake"
+  "vdrk_move/catkin_generated/package.cmake"
   "/home/anton20241/pipe_inspect_ws/devel/share/aruco/cmake/arucoConfig-version.cmake"
   "/home/anton20241/pipe_inspect_ws/devel/share/aruco/cmake/arucoConfig.cmake"
   "/home/anton20241/pipe_inspect_ws/devel/share/aruco_msgs/cmake/aruco_msgs-msg-extras.cmake"
@@ -73,8 +73,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/anton20241/pipe_inspect_ws/src/track_make/package.xml"
   "/home/anton20241/pipe_inspect_ws/src/tube/CMakeLists.txt"
   "/home/anton20241/pipe_inspect_ws/src/tube/package.xml"
-  "/home/anton20241/pipe_inspect_ws/src/vrdk_move/CMakeLists.txt"
-  "/home/anton20241/pipe_inspect_ws/src/vrdk_move/package.xml"
+  "/home/anton20241/pipe_inspect_ws/src/vdrk_move/CMakeLists.txt"
+  "/home/anton20241/pipe_inspect_ws/src/vdrk_move/package.xml"
   "/opt/ros/noetic/share/actionlib/cmake/actionlib-msg-extras.cmake"
   "/opt/ros/noetic/share/actionlib/cmake/actionlibConfig-version.cmake"
   "/opt/ros/noetic/share/actionlib/cmake/actionlibConfig.cmake"
@@ -354,7 +354,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "aruco_ros/aruco_ros/CMakeFiles/CMakeDirectoryInformation.cmake"
   "get_vrdk_pose/CMakeFiles/CMakeDirectoryInformation.cmake"
   "track_make/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "vrdk_move/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "vdrk_move/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -490,7 +490,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "track_make/CMakeFiles/track_make_generate_messages_py.dir/DependInfo.cmake"
   "track_make/CMakeFiles/track_make_generate_messages_nodejs.dir/DependInfo.cmake"
   "track_make/CMakeFiles/track_make_gennodejs.dir/DependInfo.cmake"
-  "vrdk_move/CMakeFiles/go_in_radius.dir/DependInfo.cmake"
-  "vrdk_move/CMakeFiles/est_go_in_radius.dir/DependInfo.cmake"
-  "vrdk_move/CMakeFiles/est_go_in_line.dir/DependInfo.cmake"
+  "vdrk_move/CMakeFiles/go_in_radius.dir/DependInfo.cmake"
+  "vdrk_move/CMakeFiles/est_go_in_radius.dir/DependInfo.cmake"
+  "vdrk_move/CMakeFiles/est_go_in_line.dir/DependInfo.cmake"
   )

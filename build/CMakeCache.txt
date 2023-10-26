@@ -298,10 +298,7 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Path to a program.
-DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
-
-//Doxygen found
-DOXYGEN_FOUND:BOOL=TRUE
+DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 
 //Path to a program.
 EMPY_EXECUTABLE:FILEPATH=EMPY_EXECUTABLE-NOTFOUND
@@ -383,7 +380,7 @@ RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
 
 //Name of the computer/site where compile is being run
-SITE:STRING=anton20241host
+SITE:STRING=anton20241
 
 //LSB Distrib tag
 UBUNTU:BOOL=TRUE
@@ -620,6 +617,12 @@ rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
 
+//Value Computed by CMake
+send_results_vdrk_BINARY_DIR:STATIC=/home/anton20241/pipe_inspect_ws/build/send_results_vdrk
+
+//Value Computed by CMake
+send_results_vdrk_SOURCE_DIR:STATIC=/home/anton20241/pipe_inspect_ws/src/send_results_vdrk
+
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/noetic/share/sensor_msgs/cmake
 
@@ -668,14 +671,14 @@ tube_SOURCE_DIR:STATIC=/home/anton20241/pipe_inspect_ws/src/tube
 //The directory containing a CMake configuration file for turtlesim.
 turtlesim_DIR:PATH=/opt/ros/noetic/share/turtlesim/cmake
 
+//Value Computed by CMake
+vdrk_move_BINARY_DIR:STATIC=/home/anton20241/pipe_inspect_ws/build/vdrk_move
+
+//Value Computed by CMake
+vdrk_move_SOURCE_DIR:STATIC=/home/anton20241/pipe_inspect_ws/src/vdrk_move
+
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/noetic/share/visualization_msgs/cmake
-
-//Value Computed by CMake
-vrdk_move_BINARY_DIR:STATIC=/home/anton20241/pipe_inspect_ws/build/vrdk_move
-
-//Value Computed by CMake
-vrdk_move_SOURCE_DIR:STATIC=/home/anton20241/pipe_inspect_ws/src/vrdk_move
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake

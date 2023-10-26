@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/anton20241/pipe_inspect_ws/devel/include/get_vrdk_pose/VdrkPose.h
+/home/anton20241/pipe_inspect_ws/devel/include/send_results_vdrk/VdrkPose.h
 string
 -
 vector
@@ -39,8 +39,8 @@ ros/ros.h
 -
 rosbag/bag.h
 -
-get_vrdk_pose/VdrkPose.h
-/home/anton20241/pipe_inspect_ws/src/get_vrdk_pose/src/get_vrdk_pose/VdrkPose.h
+send_results_vdrk/VdrkPose.h
+/home/anton20241/pipe_inspect_ws/src/get_vrdk_pose/src/send_results_vdrk/VdrkPose.h
 
 /opt/ros/noetic/include/class_loader/class_loader.hpp
 boost/bind.hpp
