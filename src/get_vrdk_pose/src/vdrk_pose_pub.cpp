@@ -40,6 +40,7 @@ bool allPosesGet            = false;                  // все положени
 bool getEstCrntArCamPose    = false;                  // получено оценочное положение _маркера_ относительно _камеры_
 bool getOdomPoses           = false;                  // получены фактические положения относительно ГСК
 bool initVdrkPoseIsSet      = false;                  // заданы начальные условия (положения) ВРДК
+bool initMarkerPose         = false;                  // заданы начальные условия (положения) маркера
 
 // получаем текущую скорость _маркера_
 void getVelCrntArHandler(const geometry_msgs::Twist& velCrntArMsg){
@@ -209,10 +210,12 @@ void getEstCrntArOdomPose(const tf::TransformListener& listener){
   tf::StampedTransform transform;
   try{
     listener.lookupTransform("odom", "est_aruco_link_base_direct", ros::Time(0), transform);
+    initVdrkPoseIsSet = true;
   }
   catch (tf::TransformException &ex) {
     ROS_ERROR("%s",ex.what());
     ros::Duration(1.0).sleep();
+    initVdrkPoseIsSet = false;
   }
   setPoseFromTransform(estCrntArOdomPose, transform);
 }
@@ -323,8 +326,9 @@ void setInitVdrkPose(const tf::TransformListener& listener){
   if (!initVdrkPoseIsSet){
     estCrntCamOdomPose    = crntCamOdomPose;
     estPrevArCamPose      = estCrntArCamPose;
-    getEstCrntArOdomPose(listener);
-    initVdrkPoseIsSet     = true;
+    while(!initVdrkPoseIsSet){
+      getEstCrntArOdomPose(listener);
+    }
   }
 }
 
