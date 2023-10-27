@@ -1,6 +1,6 @@
 /*
   Программа предназначена для перемещения ВДРК по окружности радиусом radiusTubeFromUser.
-  В качестве аргументов - скорость перемещения роботов.
+  В качестве аргументов - скорость перемещения роботов и радиус окружности
   Зная расстояние от маркера до камеры, 
   сперва перемещается передний робот до заданного расстояния между роботами,
   затем его догоняет задний робот.
@@ -11,9 +11,9 @@
 #include <gazebo_msgs/ModelStates.h>
 #include <boost/asio.hpp>
 
-#define MIN_ROBOTS_DIST       1.48442                             // минимальное  расстояние между камерой и маркером   [м]
-#define MAX_ROBOTS_DIST       1.77312                             // максимальное расстояние между камерой и маркером   [м]
-#define ROBOTS_DIST_PRECISION 0.00001                             // точность оценочного взаимного расположения роботов [м]
+#define MIN_ROBOTS_DIST       1.484                             // минимальное  расстояние между камерой и маркером   [м]
+#define MAX_ROBOTS_DIST       1.773                             // максимальное расстояние между камерой и маркером   [м]
+#define ROBOTS_DIST_PRECISION 0.001                             // точность оценочного взаимного расположения роботов [м]
 
 geometry_msgs::PoseStamped estCrntArCamPose;                      // текущее оценочное положение _маркера_ относительно _камеры_
 geometry_msgs::Twist       velVdrkMsg;                            // сообщение скорости для роботов [м/с]
@@ -72,7 +72,7 @@ void camera_go(){
 void go_vdrk_in_radius(){
   estCrntRobotsDist = std::sqrt(std::pow(estCrntArCamPose.pose.position.x, 2) + 
                                 std::pow(estCrntArCamPose.pose.position.y, 2) + 
-                                std::pow(estCrntArCamPose.pose.position.z, 2) );
+                                std::pow(estCrntArCamPose.pose.position.z, 2));
   ROS_INFO("\nestCrntRobotsDist = %.5f\n", estCrntRobotsDist);
   marker_go();
   camera_go();
@@ -88,12 +88,7 @@ void setup(ros::NodeHandle& node) {
   estCrntArCamPoseSub  = node.subscribe("/aruco_single/pose", 0, getEstCrntArCamPoseHandler);
   velCmdCamPub         = node.advertise<geometry_msgs::Twist>("/camera_cmd_vel", 0);
   velCmdArPub          = node.advertise<geometry_msgs::Twist>("/aruco_cmd_vel",  0);
-  velVdrkMsg.linear.x  = 0.0;
-  velVdrkMsg.linear.y  = 0.0;
-  velVdrkMsg.linear.z  = 0.0;
-  velVdrkMsg.angular.x = 0.0;
-  velVdrkMsg.angular.y = 0.0;
-  velVdrkMsg.angular.z = 0.0;
+  setStopVdrk();
 }
 
 int main(int argc, char **argv) {

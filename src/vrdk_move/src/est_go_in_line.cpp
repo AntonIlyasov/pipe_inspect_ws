@@ -22,7 +22,7 @@ ros::Publisher             velCmdArPub;                           // пабли�
 ros::Subscriber            estCrntArCamPoseSub;
 
 double vel4VdrkFromUser       = 0;                                // скорость для роботов от пользователя [м/с]
-double estCrntRobotsDist      = 0;                                // расстояние между маркером и камерой
+double estCrntRobotsDist      = 0;                                // оценочное расстояние между маркером и камерой [м]
 bool camera_is_stop           = true;
 bool marker_is_stop           = true;
 bool getEstCrntArCamPose      = false;
@@ -85,12 +85,7 @@ void setup(ros::NodeHandle& node) {
   estCrntArCamPoseSub  = node.subscribe("/aruco_single/pose", 0, getEstCrntArCamPoseHandler);
   velCmdCamPub         = node.advertise<geometry_msgs::Twist>("/camera_cmd_vel", 0);
   velCmdArPub          = node.advertise<geometry_msgs::Twist>("/aruco_cmd_vel",  0);
-  velVdrkMsg.linear.x  = 0.0;
-  velVdrkMsg.linear.y  = 0.0;
-  velVdrkMsg.linear.z  = 0.0;
-  velVdrkMsg.angular.x = 0.0;
-  velVdrkMsg.angular.y = 0.0;
-  velVdrkMsg.angular.z = 0.0;
+  setStopVdrk();
 }
 
 int main(int argc, char **argv) {

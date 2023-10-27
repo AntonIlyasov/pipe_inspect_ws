@@ -578,6 +578,12 @@ rosbag_DIR:PATH=/opt/ros/noetic/share/rosbag/cmake
 //The directory containing a CMake configuration file for rosbag_storage.
 rosbag_storage_DIR:PATH=/opt/ros/noetic/share/rosbag_storage/cmake
 
+//Value Computed by CMake
+rosbag_to_csv_BINARY_DIR:STATIC=/home/anton20241/pipe_inspect_ws/build/rosbag_to_csv
+
+//Value Computed by CMake
+rosbag_to_csv_SOURCE_DIR:STATIC=/home/anton20241/pipe_inspect_ws/src/rosbag_to_csv
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
 
@@ -819,7 +825,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
