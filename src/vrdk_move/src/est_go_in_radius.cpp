@@ -11,8 +11,8 @@
 #include <gazebo_msgs/ModelStates.h>
 #include <boost/asio.hpp>
 
-#define MIN_ROBOTS_DIST       1.484                             // минимальное  расстояние между камерой и маркером   [м]
-#define MAX_ROBOTS_DIST       1.773                             // максимальное расстояние между камерой и маркером   [м]
+#define MIN_ROBOTS_DIST       1.6                               // минимальное  расстояние между камерой и маркером   [м]
+#define MAX_ROBOTS_DIST       1.8                               // максимальное расстояние между камерой и маркером   [м]
 #define ROBOTS_DIST_PRECISION 0.001                             // точность оценочного взаимного расположения роботов [м]
 
 geometry_msgs::PoseStamped estCrntArCamPose;                      // текущее оценочное положение _маркера_ относительно _камеры_
@@ -48,7 +48,7 @@ void marker_go(){
     velCmdArPub.publish(velVdrkMsg);
     marker_is_stop       = true;
     if (marker_is_stop && camera_is_stop){
-      std::this_thread::sleep_for(std::chrono::seconds(2));
+      std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
   }
 }
@@ -64,7 +64,7 @@ void camera_go(){
     velCmdCamPub.publish(velVdrkMsg);
     camera_is_stop       = true;
     if (marker_is_stop && camera_is_stop){
-      std::this_thread::sleep_for(std::chrono::seconds(2));
+      std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
   }
 }
@@ -99,10 +99,16 @@ int main(int argc, char **argv) {
   setup(node);
   ros::Rate loop_rate(30);
   while (ros::ok()) {
-    ros::spinOnce();
-    if (!getEstCrntArCamPose) continue;
-    getEstCrntArCamPose = false;
-    go_vdrk_in_radius();
+    velVdrkMsg.linear.y  = vel4VdrkFromUser;
+    velVdrkMsg.angular.z = (-1.0) * vel4VdrkFromUser / radiusTubeFromUser;
+    velCmdArPub.publish(velVdrkMsg);
+    velVdrkMsg.linear.y  = vel4VdrkFromUser;
+    velVdrkMsg.angular.z = (-1.0) * vel4VdrkFromUser / radiusTubeFromUser;
+    velCmdCamPub.publish(velVdrkMsg);
+    // ros::spinOnce();
+    // if (!getEstCrntArCamPose) continue;
+    // getEstCrntArCamPose = false;
+    // go_vdrk_in_radius();
     loop_rate.sleep();
   }
   return 0;
