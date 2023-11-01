@@ -12,7 +12,7 @@
 
     <include>
       <uri>model://trajectory_2</uri>
-      <pose>0 0 1  0 0 0</pose>
+      <pose>0 0 1  0 0 -1.570796327</pose>
     </include>
          
     <include>
