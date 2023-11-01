@@ -1,0 +1,8 @@
+prefix=/home/anton20241/pipe_inspect_ws/install
+
+Name: drone_scene
+Description: Description of drone_scene
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

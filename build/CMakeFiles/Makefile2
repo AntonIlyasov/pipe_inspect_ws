@@ -58,6 +58,7 @@ all: duck/all
 all: aruco_ros/aruco_msgs/all
 all: track_deter_gazebo/all
 all: tube/all
+all: drone_scene/all
 all: go_to_goal_tut/all
 all: rosbag_to_csv/all
 all: aruco_ros/aruco/all
@@ -76,6 +77,7 @@ preinstall: duck/preinstall
 preinstall: aruco_ros/aruco_msgs/preinstall
 preinstall: track_deter_gazebo/preinstall
 preinstall: tube/preinstall
+preinstall: drone_scene/preinstall
 preinstall: go_to_goal_tut/preinstall
 preinstall: rosbag_to_csv/preinstall
 preinstall: aruco_ros/aruco/preinstall
@@ -99,6 +101,7 @@ clean: duck/clean
 clean: aruco_ros/aruco_msgs/clean
 clean: track_deter_gazebo/clean
 clean: tube/clean
+clean: drone_scene/clean
 clean: go_to_goal_tut/clean
 clean: rosbag_to_csv/clean
 clean: aruco_ros/aruco/clean
@@ -227,6 +230,33 @@ aruco_ros/aruco_ros/clean: aruco_ros/aruco_ros/CMakeFiles/visualization_msgs_gen
 .PHONY : aruco_ros/aruco_ros/clean
 
 #=============================================================================
+# Directory level rules for directory drone_scene
+
+# Recursive "all" directory target.
+drone_scene/all:
+
+.PHONY : drone_scene/all
+
+# Recursive "preinstall" directory target.
+drone_scene/preinstall:
+
+.PHONY : drone_scene/preinstall
+
+# Recursive "clean" directory target.
+drone_scene/clean: drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+drone_scene/clean: drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+drone_scene/clean: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+drone_scene/clean: drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/clean
+drone_scene/clean: drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+drone_scene/clean: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+drone_scene/clean: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+drone_scene/clean: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+drone_scene/clean: drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+drone_scene/clean: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+
+.PHONY : drone_scene/clean
+
+#=============================================================================
 # Directory level rules for directory duck
 
 # Recursive "all" directory target.
@@ -331,16 +361,6 @@ go_to_goal_tut/preinstall:
 .PHONY : go_to_goal_tut/preinstall
 
 # Recursive "clean" directory target.
-go_to_goal_tut/clean: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-go_to_goal_tut/clean: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-go_to_goal_tut/clean: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-go_to_goal_tut/clean: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/clean
-go_to_goal_tut/clean: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-go_to_goal_tut/clean: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-go_to_goal_tut/clean: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-go_to_goal_tut/clean: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-go_to_goal_tut/clean: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-go_to_goal_tut/clean: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 go_to_goal_tut/clean: go_to_goal_tut/CMakeFiles/go_to_goal_tut.dir/clean
 
 .PHONY : go_to_goal_tut/clean
@@ -1440,274 +1460,274 @@ aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_generate_messages_eus.dir/clean:
 .PHONY : aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir
+# Target rules for target drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir
 
 # All Build rule for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
+drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_cpp: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+roscpp_generate_messages_cpp: drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 .PHONY : roscpp_generate_messages_cpp
 
 # clean rule for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir
+# Target rules for target drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir
 
 # All Build rule for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/all:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/depend
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/build
+drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/all:
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/depend
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/all
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
+drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_eus: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+roscpp_generate_messages_eus: drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 .PHONY : roscpp_generate_messages_eus
 
 # clean rule for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
+# Target rules for target drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+rosgraph_msgs_generate_messages_nodejs: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 .PHONY : rosgraph_msgs_generate_messages_nodejs
 
 # clean rule for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir
+# Target rules for target drone_scene/CMakeFiles/roscpp_generate_messages_py.dir
 
 # All Build rule for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/all:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/depend
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/build
+drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/all:
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/depend
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/all
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
+drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_py: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/rule
+roscpp_generate_messages_py: drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 .PHONY : roscpp_generate_messages_py
 
 # clean rule for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/clean
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/clean
+drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/clean:
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/clean
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir
+# Target rules for target drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir
 
 # All Build rule for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
+drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_nodejs: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+roscpp_generate_messages_nodejs: drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 .PHONY : roscpp_generate_messages_nodejs
 
 # clean rule for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+# Target rules for target drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+rosgraph_msgs_generate_messages_cpp: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 .PHONY : rosgraph_msgs_generate_messages_cpp
 
 # clean rule for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
+# Target rules for target drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_eus: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+rosgraph_msgs_generate_messages_eus: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 .PHONY : rosgraph_msgs_generate_messages_eus
 
 # clean rule for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+# Target rules for target drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+rosgraph_msgs_generate_messages_lisp: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 .PHONY : rosgraph_msgs_generate_messages_lisp
 
 # clean rule for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir
+# Target rules for target drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir
 
 # All Build rule for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
+drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_lisp: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+roscpp_generate_messages_lisp: drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 .PHONY : roscpp_generate_messages_lisp
 
 # clean rule for target.
-go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-.PHONY : go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
+	$(MAKE) -f drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+.PHONY : drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+# Target rules for target drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
 
 # All Build rule for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/pipe_inspect_ws/build/CMakeFiles 0
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_py: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+rosgraph_msgs_generate_messages_py: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 .PHONY : rosgraph_msgs_generate_messages_py
 
 # clean rule for target.
-go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-.PHONY : go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
 # Target rules for target go_to_goal_tut/CMakeFiles/go_to_goal_tut.dir
@@ -1971,16 +1991,16 @@ aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: aruco_ros/aruco_msgs/CM
 aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_generate_messages_lisp.dir/all
 aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_generate_messages_nodejs.dir/all
 aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_generate_messages_eus.dir/all
-aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_eus.dir/all
-aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_py.dir/all
-aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: go_to_goal_tut/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: go_to_goal_tut/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: drone_scene/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: drone_scene/CMakeFiles/roscpp_generate_messages_eus.dir/all
+aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: drone_scene/CMakeFiles/roscpp_generate_messages_py.dir/all
+aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: drone_scene/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: drone_scene/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: drone_scene/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: aruco_ros/aruco/CMakeFiles/aruco.dir/all
 aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: get_frame_from_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
 aruco_ros/aruco_ros/CMakeFiles/marker_publisher.dir/all: get_frame_from_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
