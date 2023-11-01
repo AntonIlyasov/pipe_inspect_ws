@@ -60,10 +60,10 @@ get_vrdk_pose/CMakeFiles/get_vrdk_pose_generate_messages_py: /home/anton20241/pi
 /home/anton20241/pipe_inspect_ws/devel/lib/python3/dist-packages/get_vrdk_pose/msg/_VdrkPose.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/anton20241/pipe_inspect_ws/devel/lib/python3/dist-packages/get_vrdk_pose/msg/_VdrkPose.py: /home/anton20241/pipe_inspect_ws/src/get_vrdk_pose/msg/VdrkPose.msg
 /home/anton20241/pipe_inspect_ws/devel/lib/python3/dist-packages/get_vrdk_pose/msg/_VdrkPose.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/anton20241/pipe_inspect_ws/devel/lib/python3/dist-packages/get_vrdk_pose/msg/_VdrkPose.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/anton20241/pipe_inspect_ws/devel/lib/python3/dist-packages/get_vrdk_pose/msg/_VdrkPose.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/anton20241/pipe_inspect_ws/devel/lib/python3/dist-packages/get_vrdk_pose/msg/_VdrkPose.py: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 /home/anton20241/pipe_inspect_ws/devel/lib/python3/dist-packages/get_vrdk_pose/msg/_VdrkPose.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/anton20241/pipe_inspect_ws/devel/lib/python3/dist-packages/get_vrdk_pose/msg/_VdrkPose.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/anton20241/pipe_inspect_ws/devel/lib/python3/dist-packages/get_vrdk_pose/msg/_VdrkPose.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anton20241/pipe_inspect_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG get_vrdk_pose/VdrkPose"
 	cd /home/anton20241/pipe_inspect_ws/build/get_vrdk_pose && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/anton20241/pipe_inspect_ws/src/get_vrdk_pose/msg/VdrkPose.msg -Iget_vrdk_pose:/home/anton20241/pipe_inspect_ws/src/get_vrdk_pose/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p get_vrdk_pose -o /home/anton20241/pipe_inspect_ws/devel/lib/python3/dist-packages/get_vrdk_pose/msg
 

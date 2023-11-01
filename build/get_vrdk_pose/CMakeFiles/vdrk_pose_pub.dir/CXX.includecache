@@ -6,34 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/anton20241/pipe_inspect_ws/devel/include/get_vrdk_pose/VdrkPose.h
-string
--
-vector
--
-memory
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-geometry_msgs/PoseStamped.h
--
-geometry_msgs/PoseStamped.h
--
-geometry_msgs/PoseStamped.h
--
-geometry_msgs/PoseStamped.h
--
-geometry_msgs/PoseStamped.h
--
-geometry_msgs/PoseStamped.h
--
-
 /home/anton20241/pipe_inspect_ws/src/get_vrdk_pose/src/vdrk_pose_pub.cpp
 ros/ros.h
 -

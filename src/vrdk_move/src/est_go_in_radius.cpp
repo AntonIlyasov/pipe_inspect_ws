@@ -11,9 +11,9 @@
 #include <gazebo_msgs/ModelStates.h>
 #include <boost/asio.hpp>
 
-#define MIN_ROBOTS_DIST       1.6                               // минимальное  расстояние между камерой и маркером   [м]
-#define MAX_ROBOTS_DIST       1.8                               // максимальное расстояние между камерой и маркером   [м]
-#define ROBOTS_DIST_PRECISION 0.001                             // точность оценочного взаимного расположения роботов [м]
+#define MIN_ROBOTS_DIST       1.2                                 // минимальное  расстояние между камерой и маркером   [м]
+#define MAX_ROBOTS_DIST       1.6                                 // максимальное расстояние между камерой и маркером   [м]
+#define ROBOTS_DIST_PRECISION 0.001                               // точность оценочного взаимного расположения роботов [м]
 
 geometry_msgs::PoseStamped estCrntArCamPose;                      // текущее оценочное положение _маркера_ относительно _камеры_
 geometry_msgs::Twist       velVdrkMsg;                            // сообщение скорости для роботов [м/с]
@@ -99,16 +99,16 @@ int main(int argc, char **argv) {
   setup(node);
   ros::Rate loop_rate(30);
   while (ros::ok()) {
-    velVdrkMsg.linear.y  = vel4VdrkFromUser;
-    velVdrkMsg.angular.z = (-1.0) * vel4VdrkFromUser / radiusTubeFromUser;
-    velCmdArPub.publish(velVdrkMsg);
-    velVdrkMsg.linear.y  = vel4VdrkFromUser;
-    velVdrkMsg.angular.z = (-1.0) * vel4VdrkFromUser / radiusTubeFromUser;
-    velCmdCamPub.publish(velVdrkMsg);
-    // ros::spinOnce();
-    // if (!getEstCrntArCamPose) continue;
-    // getEstCrntArCamPose = false;
-    // go_vdrk_in_radius();
+    // velVdrkMsg.linear.y  = vel4VdrkFromUser;
+    // velVdrkMsg.angular.z = (-1.0) * vel4VdrkFromUser / radiusTubeFromUser;
+    // velCmdArPub.publish(velVdrkMsg);
+    // velVdrkMsg.linear.y  = vel4VdrkFromUser;
+    // velVdrkMsg.angular.z = (-1.0) * vel4VdrkFromUser / radiusTubeFromUser;
+    // velCmdCamPub.publish(velVdrkMsg);
+    ros::spinOnce();
+    if (!getEstCrntArCamPose) continue;
+    getEstCrntArCamPose = false;
+    go_vdrk_in_radius();
     loop_rate.sleep();
   }
   return 0;
