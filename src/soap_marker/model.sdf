@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <model name="soap_marker">
+    <pose>0 0 0 0 0 0</pose> <!-- <pose> 0 3 0.25 0 0 0 </pose> -->  <!-- <pose>0.36725 1.43828 0.25 0 0 -0.5</pose> -->
+    <static>false</static>
+
+    <link name="aruco_link_base">
+
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://soap_marker/meshes/soap_marker.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://soap_marker/materials/scripts</uri>
+            <uri>model://soap_marker/materials/textures</uri>
+            <name>ArucoVisualMarker26/Marker</name>
+          </script>
+          <emissive>1 1 1 1</emissive>
+        </material>
+      </visual>
+
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://soap_marker/meshes/soap_marker.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      
+    </link>
+
+    <plugin name="aruco_move" filename="libgazebo_ros_planar_move.so">
+      <commandTopic>aruco_cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>    
+      <odometryFrame>odom</odometryFrame>                         <!-- header frame id -->
+      <robotBaseFrame>aruco_link_base</robotBaseFrame>            <!-- child  frame id -->
+    </plugin>
+
+  </model>
+</sdf>

@@ -46,7 +46,7 @@ void marker_go(){
     velCmdArPub.publish(velVdrkMsg);
     marker_is_stop       = true;
     if (marker_is_stop && camera_is_stop){
-      std::this_thread::sleep_for(std::chrono::seconds(2));
+      std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
   }
 }
@@ -61,7 +61,7 @@ void camera_go(){
     velCmdCamPub.publish(velVdrkMsg);
     camera_is_stop       = true;
     if (marker_is_stop && camera_is_stop){
-      std::this_thread::sleep_for(std::chrono::seconds(2));
+      std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
   }
 }
