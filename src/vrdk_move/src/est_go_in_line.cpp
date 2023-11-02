@@ -95,10 +95,8 @@ int main(int argc, char **argv) {
   setup(node);
   ros::Rate loop_rate(30);
   while (ros::ok()) {
-    ros::spinOnce();
-    if (!getEstCrntArCamPose) continue;
-    getEstCrntArCamPose = false;
-    go_vdrk_in_line();
+    velVdrkMsg.linear.y  = vel4VdrkFromUser;
+    velCmdArPub.publish(velVdrkMsg);
     loop_rate.sleep();
   }
   return 0;
