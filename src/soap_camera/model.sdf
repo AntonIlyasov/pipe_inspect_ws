@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.5">
-  <model name="my_camera">
+  <model name="soap_camera">
     <pose>0 0 0 0 0 0</pose>
     <static>false</static>
 

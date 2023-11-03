@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.5">
-  <model name="soap_marker">
+  <model name="aruco_visual_marker_26">
     <pose>0 0 0 0 0 0</pose> <!-- <pose> 0 3 0.25 0 0 0 </pose> -->  <!-- <pose>0.36725 1.43828 0.25 0 0 -0.5</pose> -->
     <static>false</static>
 
@@ -8,14 +8,14 @@
 
       <visual name="visual">
         <geometry>
-          <mesh>
-            <uri>model://soap_marker/meshes/soap_marker.dae</uri>
-          </mesh>
+          <box>
+            <size>0.5 0.2 0.5</size>
+          </box>
         </geometry>
         <material>
           <script>
-            <uri>model://soap_marker/materials/scripts</uri>
-            <uri>model://soap_marker/materials/textures</uri>
+            <uri>model://aruco_visual_marker_26/materials/scripts</uri>
+            <uri>model://aruco_visual_marker_26/materials/textures</uri>
             <name>ArucoVisualMarker26/Marker</name>
           </script>
           <emissive>1 1 1 1</emissive>
@@ -24,9 +24,9 @@
 
       <collision name="collision">
         <geometry>
-          <mesh>
-            <uri>model://soap_marker/meshes/soap_marker.dae</uri>
-          </mesh>
+          <box>
+            <size>0.5 0.2 0.5</size>
+          </box>
         </geometry>
       </collision>
       
