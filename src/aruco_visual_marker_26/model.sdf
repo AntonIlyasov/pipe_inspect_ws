@@ -18,7 +18,7 @@
             <uri>model://aruco_visual_marker_26/materials/textures</uri>
             <name>ArucoVisualMarker26/Marker</name>
           </script>
-          
+          <emissive>1 1 1 1</emissive>
         </material>
       </visual>
 

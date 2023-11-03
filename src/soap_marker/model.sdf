@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.5">
-  <model name="aruco_visual_marker_26">
+  <model name="soap_marker">
     <pose>0 0 0 0 0 0</pose> <!-- <pose> 0 3 0.25 0 0 0 </pose> -->  <!-- <pose>0.36725 1.43828 0.25 0 0 -0.5</pose> -->
     <static>false</static>
 
@@ -8,8 +8,28 @@
 
       <visual name="visual">
         <geometry>
+          <mesh>
+            <uri>model://soap_marker/meshes/soap_marker.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://soap_marker/meshes/soap_marker.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      
+    </link>
+
+    <link name="marker_box">
+      <pose>0 -0.46 0 0 0 0</pose>
+      <visual name="visual">
+        <geometry>
           <box>
-            <size>0.5 0.2 0.5</size>
+            <size>0.5 0.1 0.5</size>
           </box>
         </geometry>
         <material>
@@ -25,12 +45,17 @@
       <collision name="collision">
         <geometry>
           <box>
-            <size>0.5 0.2 0.5</size>
+            <size>0.5 0.1 0.5</size>
           </box>
         </geometry>
       </collision>
       
     </link>
+
+    <joint name="merker_joint" type="fixed">
+      <child>marker_box</child>
+      <parent>aruco_link_base</parent>
+    </joint>
 
     <plugin name="aruco_move" filename="libgazebo_ros_planar_move.so">
       <commandTopic>aruco_cmd_vel</commandTopic>
