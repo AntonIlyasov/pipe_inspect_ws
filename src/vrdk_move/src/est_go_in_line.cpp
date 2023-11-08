@@ -11,8 +11,8 @@
 #include <gazebo_msgs/ModelStates.h>
 #include <boost/asio.hpp>
 
-#define MIN_ROBOTS_DIST       1.2                                 // минимальное  расстояние между камерой и маркером   [м]
-#define MAX_ROBOTS_DIST       1.4                                 // максимальное расстояние между камерой и маркером   [м]
+#define MIN_ROBOTS_DIST       0.7                                 // минимальное  расстояние между камерой и маркером   [м]
+#define MAX_ROBOTS_DIST       0.75                                 // максимальное расстояние между камерой и маркером   [м]
 #define ROBOTS_DIST_PRECISION 0.001                               // точность оценочного взаимного расположения роботов [м]
 
 geometry_msgs::PoseStamped estCrntArCamPose;                      // текущее оценочное положение _маркера_ относительно _камеры_
