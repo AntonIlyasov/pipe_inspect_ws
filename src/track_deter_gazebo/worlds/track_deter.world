@@ -12,7 +12,8 @@
         
     <include>
       <uri>model://aruco_visual_marker_26</uri>
-      <pose>0.32667 1.36136 0.25  0 0 -0.47095</pose>
+      <pose>0.060374 0.998176 0.25  0 0 -0.120719</pose>
+      <!-- <pose>0 1.000001 0.25  0 0 0</pose> -->
     </include>
     
     <include>

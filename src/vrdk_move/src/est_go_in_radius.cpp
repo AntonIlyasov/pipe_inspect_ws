@@ -11,9 +11,9 @@
 #include <gazebo_msgs/ModelStates.h>
 #include <boost/asio.hpp>
 
-#define MIN_ROBOTS_DIST       1.2                                 // минимальное  расстояние между камерой и маркером   [м]
-#define MAX_ROBOTS_DIST       1.6                                 // максимальное расстояние между камерой и маркером   [м]
-#define ROBOTS_DIST_PRECISION 0.001                               // точность оценочного взаимного расположения роботов [м]
+#define MIN_ROBOTS_DIST       1.0                                 // минимальное  расстояние между камерой и маркером   [м]
+#define MAX_ROBOTS_DIST       7.0                                 // максимальное расстояние между камерой и маркером   [м]
+#define ROBOTS_DIST_PRECISION 0.01                                // точность оценочного взаимного расположения роботов [м]
 
 geometry_msgs::PoseStamped estCrntArCamPose;                      // текущее оценочное положение _маркера_ относительно _камеры_
 geometry_msgs::Twist       velVdrkMsg;                            // сообщение скорости для роботов [м/с]
@@ -27,6 +27,7 @@ double estCrntRobotsDist      = 0;                                // оцено�
 bool camera_is_stop           = true;
 bool marker_is_stop           = true;
 bool getEstCrntArCamPose      = false;
+bool start_session            = true;
 
 void setStopVdrk(){
   velVdrkMsg.linear.x  = 0.0;
@@ -39,6 +40,7 @@ void setStopVdrk(){
 
 void marker_go(){
   if ((ROBOTS_DIST_PRECISION < (MAX_ROBOTS_DIST - estCrntRobotsDist)) && camera_is_stop) {
+    start_session        = false;
     velVdrkMsg.linear.y  = vel4VdrkFromUser;
     velVdrkMsg.angular.z = (-1.0) * vel4VdrkFromUser / radiusTubeFromUser;
     velCmdArPub.publish(velVdrkMsg);
@@ -55,6 +57,7 @@ void marker_go(){
 
 void camera_go(){
   if (((estCrntRobotsDist - MIN_ROBOTS_DIST) > ROBOTS_DIST_PRECISION) && marker_is_stop) {
+    start_session        = false;
     velVdrkMsg.linear.y  = vel4VdrkFromUser;
     velVdrkMsg.angular.z = (-1.0) * vel4VdrkFromUser / radiusTubeFromUser;
     velCmdCamPub.publish(velVdrkMsg);
@@ -91,6 +94,15 @@ void setup(ros::NodeHandle& node) {
   setStopVdrk();
 }
 
+void catch_up_with_each_other(){
+  setStopVdrk();
+  velCmdArPub.publish(velVdrkMsg);
+  velVdrkMsg.linear.y  = vel4VdrkFromUser;
+  velVdrkMsg.angular.z = (-1.0) * vel4VdrkFromUser / radiusTubeFromUser;
+  velCmdCamPub.publish(velVdrkMsg);
+  std::cout << "camera move && marker stop\n";
+}
+
 int main(int argc, char **argv) {
   ros::init(argc, argv, "est_go_in_radius");
   ros::NodeHandle node;
@@ -99,16 +111,17 @@ int main(int argc, char **argv) {
   setup(node);
   ros::Rate loop_rate(30);
   while (ros::ok()) {
-    // velVdrkMsg.linear.y  = vel4VdrkFromUser;
-    // velVdrkMsg.angular.z = (-1.0) * vel4VdrkFromUser / radiusTubeFromUser;
-    // velCmdArPub.publish(velVdrkMsg);
-    // velVdrkMsg.linear.y  = vel4VdrkFromUser;
-    // velVdrkMsg.angular.z = (-1.0) * vel4VdrkFromUser / radiusTubeFromUser;
-    // velCmdCamPub.publish(velVdrkMsg);
     ros::spinOnce();
-    if (!getEstCrntArCamPose) continue;
-    getEstCrntArCamPose = false;
-    go_vdrk_in_radius();
+
+    if(getEstCrntArCamPose){
+      getEstCrntArCamPose     = false;
+      go_vdrk_in_radius();
+      std::cout << "\033[1;32mSUCCESS CONNECT\033[0m\n";
+    }
+    else if(!getEstCrntArCamPose && !start_session){
+      // catch_up_with_each_other();
+      std::cout << "\033[1;31mERROR CONNECT\033[0m\n";
+    }
     loop_rate.sleep();
   }
   return 0;

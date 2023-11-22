@@ -132,8 +132,10 @@ int main(int argc, char **argv) {
       std::cout << "!!!SUCCESS CONNECT!!!\n";
       getEstCrntArCamPose = false;
       go_vdrk_in_line();
-    } 
-    else if (!getEstCrntArCamPose && !start_session)  catch_up_with_each_other();
+    }
+    else if(!getEstCrntArCamPose && !start_session){
+      catch_up_with_each_other();
+    }
     loop_rate.sleep();
   }
   return 0;

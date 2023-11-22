@@ -1,7 +1,7 @@
 <launch>
 
     <arg name="markerId"        default="26"/>
-    <arg name="markerSize"      default="0.38888888889"/>    <!-- in m -->
+    <arg name="markerSize"      default="0.388888888"/>    <!-- in m -->
     <arg name="eye"             default="left"/>
     <arg name="camera_frame"    default="est_camera_link_optical"/>
     <arg name="marker_frame"    default="est_aruco_link_optical"/>  <!--est_aruco_link_optical-->

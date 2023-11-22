@@ -59,6 +59,7 @@ all: aruco_ros/aruco_msgs/all
 all: track_deter_gazebo/all
 all: tube/all
 all: go_to_goal_tut/all
+all: rosbag_to_csv/all
 all: aruco_ros/aruco/all
 all: get_frame_from_cam/all
 all: marker_detect_module/all
@@ -76,6 +77,7 @@ preinstall: aruco_ros/aruco_msgs/preinstall
 preinstall: track_deter_gazebo/preinstall
 preinstall: tube/preinstall
 preinstall: go_to_goal_tut/preinstall
+preinstall: rosbag_to_csv/preinstall
 preinstall: aruco_ros/aruco/preinstall
 preinstall: get_frame_from_cam/preinstall
 preinstall: marker_detect_module/preinstall
@@ -98,6 +100,7 @@ clean: aruco_ros/aruco_msgs/clean
 clean: track_deter_gazebo/clean
 clean: tube/clean
 clean: go_to_goal_tut/clean
+clean: rosbag_to_csv/clean
 clean: aruco_ros/aruco/clean
 clean: get_frame_from_cam/clean
 clean: marker_detect_module/clean
@@ -416,6 +419,24 @@ marker_detect_module/preinstall:
 marker_detect_module/clean: marker_detect_module/CMakeFiles/img_from_cam_pub.dir/clean
 
 .PHONY : marker_detect_module/clean
+
+#=============================================================================
+# Directory level rules for directory rosbag_to_csv
+
+# Recursive "all" directory target.
+rosbag_to_csv/all:
+
+.PHONY : rosbag_to_csv/all
+
+# Recursive "preinstall" directory target.
+rosbag_to_csv/preinstall:
+
+.PHONY : rosbag_to_csv/preinstall
+
+# Recursive "clean" directory target.
+rosbag_to_csv/clean:
+
+.PHONY : rosbag_to_csv/clean
 
 #=============================================================================
 # Directory level rules for directory track_deter_gazebo

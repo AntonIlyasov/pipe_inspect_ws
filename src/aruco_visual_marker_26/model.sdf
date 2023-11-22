@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.5">
   <model name="aruco_visual_marker_26">
-    <pose>0 0 0 0 0 0</pose> <!-- <pose> 0 3 0.25 0 0 0 </pose> -->  <!-- <pose>0.36725 1.43828 0.25 0 0 -0.5</pose> -->
+    <pose>0 0 0 0 0 0</pose>
     <static>false</static>
 
     <link name="aruco_link_base">
@@ -9,7 +9,7 @@
       <visual name="visual">
         <geometry>
           <box>
-            <size>0.5 0.2 0.5</size>
+            <size>0.5 0.000001 0.5</size>
           </box>
         </geometry>
         <material>
@@ -25,7 +25,7 @@
       <collision name="collision">
         <geometry>
           <box>
-            <size>0.5 0.2 0.5</size>
+            <size>0.5 0.5 0.5</size>
           </box>
         </geometry>
       </collision>
@@ -41,3 +41,16 @@
 
   </model>
 </sdf>
+
+      <inertial>
+        <mass>500</mass>
+        <inertia> <!-- inertias are tricky to compute -->
+          <!-- http://gazebosim.org/tutorials?tut=inertia&cat=build_robot -->
+          <ixx>20.75</ixx>       <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
+          <ixy>0</ixy>         <!-- for a box: ixy = 0 -->
+          <ixz>0</ixz>         <!-- for a box: ixz = 0 -->
+          <iyy>20.75</iyy>       <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
+          <iyz>0</iyz>         <!-- for a box: iyz = 0 -->
+          <izz>20.75</izz>       <!-- for a box: izz = 0.083 * mass * (x*x + y*y) -->
+        </inertia>
+      </inertial>

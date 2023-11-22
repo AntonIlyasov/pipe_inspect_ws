@@ -1,2 +1,2 @@
-aruco_ros/aruco:aruco_ros/aruco_msgs:aruco_ros/aruco_ros:duck:get_frame_from_cam:get_vrdk_pose:go_to_goal_tut:marker_detect_module:track_deter_gazebo:track_make:tube:vrdk_move
+aruco_ros/aruco:aruco_ros/aruco_msgs:aruco_ros/aruco_ros:duck:get_frame_from_cam:get_vrdk_pose:go_to_goal_tut:marker_detect_module:rosbag_to_csv:track_deter_gazebo:track_make:tube:vrdk_move
 -DCATKIN_DEVEL_PREFIX=/home/anton20241/pipe_inspect_ws/devel -DCMAKE_INSTALL_PREFIX=/home/anton20241/pipe_inspect_ws/install -G Unix Makefiles

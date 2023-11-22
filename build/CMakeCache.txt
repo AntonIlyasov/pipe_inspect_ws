@@ -455,12 +455,6 @@ cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 cv_bridge_DIR:PATH=/opt/ros/noetic/share/cv_bridge/cmake
 
 //Value Computed by CMake
-drone_scene_BINARY_DIR:STATIC=/home/anton20241/pipe_inspect_ws/build/drone_scene
-
-//Value Computed by CMake
-drone_scene_SOURCE_DIR:STATIC=/home/anton20241/pipe_inspect_ws/src/drone_scene
-
-//Value Computed by CMake
 duck_BINARY_DIR:STATIC=/home/anton20241/pipe_inspect_ws/build/duck
 
 //Value Computed by CMake
@@ -831,7 +825,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
