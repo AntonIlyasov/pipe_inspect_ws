@@ -166,6 +166,7 @@ void sendEstArLinkBase2EstCamLinkOptTransform(){
   tf::TransformBroadcaster br;
   tf::Transform transform;
   tf::Transform transform_inverse;
+  
   transform.setOrigin( tf::Vector3( estCrntArCamPose.pose.position.x, 
                                     estCrntArCamPose.pose.position.y, 
                                     estCrntArCamPose.pose.position.z) );
@@ -184,6 +185,7 @@ void sendEstCamLinkOpt2EstCamLinkBaseTransform(){
   tf::Transform transform_inverse;
   transform.setOrigin( tf::Vector3(0, 0, 0) );
   transform.setRotation( tf::Quaternion(-0.7071067811865476, 0, 0, 0.7071067811865476) );
+  transform.setRotation()
   transform_inverse = transform.inverse();
   br.sendTransform( tf::StampedTransform(transform_inverse, ros::Time::now(), "est_camera_link_optical_inverse", "est_camera_link_base_inverse") );
   ROS_INFO("est_camera_link_optical_inverse -> est_camera_link_base_inverse");
@@ -286,6 +288,7 @@ void setRes2Write(){
   vdrkPose.crntArOdomPose      = crntArOdomPose;
   vdrkPose.estCrntCamOdomPose  = estCrntCamOdomPose;
   vdrkPose.crntCamOdomPose     = crntCamOdomPose;
+  vdrkPose.
 }
 
 // расстояние между точками
